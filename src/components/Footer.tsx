@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import Logo from "./Logo";
+import { contactConfig } from "@/config/contact";
 
 export default async function Footer() {
   const t = await getTranslations("Footer");
@@ -30,8 +31,22 @@ export default async function Footer() {
             {t("contactHeading")}
           </h4>
           <ul className="space-y-2 text-sm text-muted">
-            <li>hello@srynic.com</li>
-            <li>{t("office")}</li>
+            <li>
+              <a href={`mailto:${contactConfig.email}`} className="hover:text-brand">
+                {contactConfig.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`https://wa.me/${contactConfig.whatsapp.number}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand"
+              >
+                WhatsApp {contactConfig.whatsapp.displayNumber}
+              </a>
+            </li>
+            <li>{contactConfig.office}</li>
           </ul>
         </div>
       </div>

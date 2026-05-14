@@ -84,11 +84,11 @@
     "fieldTypePh": "e.g. Web platform, mobile app, AI integration",
     "fieldMessage": "Message",
     "fieldMessagePh": "Tell us about your project, timeline, and goals.",
-    "submit": "Send message",
-    "submitting": "Sending...",
-    "successTitle": "Message sent.",
-    "successBody": "Thanks for reaching out. We'll get back to you within one business day.",
-    "sendAnother": "Send another message"
+    "submit": "Send via WhatsApp",
+    "submitting": "Opening WhatsApp...",
+    "successTitle": "WhatsApp opened.",
+    "successBody": "Your message is ready in WhatsApp. Hit send there to finish.",
+    "sendAnother": "Write another message"
   },
   "Footer": {
     "tagline": "Building digital products that put the future in your hands.",

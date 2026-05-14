@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import ContactForm from "@/components/ContactForm";
+import { contactConfig } from "@/config/contact";
 
 export const metadata: Metadata = {
   title: "Contact — SRYNIC",
@@ -28,8 +29,26 @@ export default async function ContactPage() {
                 {t("emailLabel")}
               </dt>
               <dd className="mt-1 text-lg font-medium text-foreground">
-                <a href="mailto:hello@srynic.com" className="hover:text-brand">
-                  hello@srynic.com
+                <a
+                  href={`mailto:${contactConfig.email}`}
+                  className="hover:text-brand"
+                >
+                  {contactConfig.email}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wider text-muted">
+                WhatsApp
+              </dt>
+              <dd className="mt-1 text-lg font-medium text-foreground">
+                <a
+                  href={`https://wa.me/${contactConfig.whatsapp.number}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand"
+                >
+                  {contactConfig.whatsapp.displayNumber}
                 </a>
               </dd>
             </div>
@@ -38,7 +57,7 @@ export default async function ContactPage() {
                 {t("officeLabel")}
               </dt>
               <dd className="mt-1 text-lg font-medium text-foreground">
-                {t("office")}
+                {contactConfig.office}
               </dd>
             </div>
             <div>

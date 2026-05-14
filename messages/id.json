@@ -84,11 +84,11 @@
     "fieldTypePh": "Contoh: Platform web, aplikasi mobile, integrasi AI",
     "fieldMessage": "Pesan",
     "fieldMessagePh": "Ceritakan tentang proyek, timeline, dan tujuan Anda.",
-    "submit": "Kirim pesan",
-    "submitting": "Mengirim...",
-    "successTitle": "Pesan terkirim.",
-    "successBody": "Terima kasih sudah menghubungi kami. Kami akan membalas dalam satu hari kerja.",
-    "sendAnother": "Kirim pesan lagi"
+    "submit": "Kirim via WhatsApp",
+    "submitting": "Membuka WhatsApp...",
+    "successTitle": "WhatsApp dibuka.",
+    "successBody": "Pesan Anda sudah disiapkan di WhatsApp. Tekan kirim di sana untuk menyelesaikan.",
+    "sendAnother": "Tulis pesan lagi"
   },
   "Footer": {
     "tagline": "Membangun produk digital yang menempatkan masa depan di tangan Anda.",
