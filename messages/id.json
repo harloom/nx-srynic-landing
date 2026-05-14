@@ -1,0 +1,106 @@
+{
+  "Nav": {
+    "home": "Beranda",
+    "projects": "Proyek",
+    "contact": "Kontak",
+    "getInTouch": "Hubungi Kami",
+    "toggleMenu": "Buka menu"
+  },
+  "Hero": {
+    "badge": "Future in Hand",
+    "title1": "Membangun masa depan,",
+    "title2": "satu produk demi satu produk.",
+    "subtitle": "SRYNIC adalah studio digital engineering yang membangun software, platform, dan sistem cerdas untuk mendorong bisnis Anda maju.",
+    "primary": "Lihat karya kami",
+    "secondary": "Mulai proyek →"
+  },
+  "About": {
+    "eyebrow": "Tentang SRYNIC",
+    "title": "Studio engineer, desainer, dan pembangun.",
+    "p1": "Kami berkolaborasi dengan tim ambisius untuk merancang dan meluncurkan produk digital secara menyeluruh — dari discovery, arsitektur, hingga rilis dan skala. Karya kami mencakup fintech, edtech, logistik, dan IoT, dengan satu benang merah: teknologi yang memberdayakan manusia.",
+    "p2": "Berbasis di Jakarta, SRYNIC bekerja dengan budaya remote-first dan fokus penuh pada kualitas. Kami tidak hanya menulis kode — kami memberi hasil.",
+    "stat1": "Produk dirilis",
+    "stat2": "Industri dilayani",
+    "stat3": "Tahun pengalaman",
+    "stat4": "Remote-first",
+    "stat1Value": "30+",
+    "stat2Value": "12",
+    "stat3Value": "5+",
+    "stat4Value": "100%"
+  },
+  "Services": {
+    "eyebrow": "Yang Kami Bangun",
+    "title": "Sistem untuk setiap platform.",
+    "subtitle": "Dari aplikasi desktop native hingga platform berbasis AI, kami membangun software lintas perangkat tempat pengguna Anda berada.",
+    "desktopTitle": "Software Desktop",
+    "desktopBody": "Aplikasi desktop native maupun cross-platform untuk Windows, macOS, dan Linux — dibangun untuk performa tinggi dan workflow offline-first.",
+    "mobileTitle": "Aplikasi Mobile",
+    "mobileBody": "Aplikasi iOS dan Android dengan rasa native dan UX modern — dari MVP hingga aplikasi mission-critical yang digunakan ribuan orang setiap hari.",
+    "webTitle": "Platform Web",
+    "webBody": "Aplikasi web, dashboard, dan situs marketing yang responsif, cepat, SEO friendly, dan siap di-scale — Next.js, React, dan tech stack modern.",
+    "aiTitle": "Integrasi AI",
+    "aiBody": "Mengintegrasikan LLM, vector search, dan otomasi cerdas ke produk Anda — dari copilot, chatbot, hingga workflow AI kustom."
+  },
+  "Goals": {
+    "eyebrow": "Tujuan Kami",
+    "title": "Mengapa kami membangun.",
+    "subtitle": "Tiga prinsip yang menjadi pegangan kami dalam setiap engagement.",
+    "g1Title": "Memberdayakan manusia",
+    "g1Body": "Software seharusnya menyederhanakan pekerjaan yang rumit. Kami mendesain untuk manusia di balik layar — operator, pelanggan, dan tim.",
+    "g2Title": "Engineering untuk jangka panjang",
+    "g2Body": "Kami memilih teknologi yang stabil dan arsitektur yang bersih. Produk kami dibangun untuk dirawat, bukan sekedar dirilis.",
+    "g3Title": "Mendorong batas teknologi",
+    "g3Body": "Kami berinvestasi pada tools baru — AI, IoT, real-time systems — supaya partner kami bisa melompat jauh, bukan mengejar."
+  },
+  "CTA": {
+    "title": "Punya ide? Mari kita wujudkan bersama.",
+    "subtitle": "Ceritakan tentang proyek Anda, kami akan membalas dalam 1 hari kerja.",
+    "button": "Hubungi kami →"
+  },
+  "Projects": {
+    "eyebrow": "Proyek",
+    "title": "Karya pilihan.",
+    "subtitle": "Sekilas platform, produk, dan sistem yang telah kami bangun bersama partner di berbagai industri.",
+    "ctaTitle": "Proyek Anda bisa menjadi yang berikutnya.",
+    "ctaSubtitle": "Kami menerima beberapa engagement baru setiap kuartal.",
+    "ctaButton": "Mulai percakapan →"
+  },
+  "Contact": {
+    "eyebrow": "Kontak",
+    "title": "Mari bangun sesuatu bersama.",
+    "subtitle": "Ceritakan sedikit tentang proyek, tujuan, dan timeline Anda. Kami akan membalas dalam satu hari kerja.",
+    "emailLabel": "Email",
+    "officeLabel": "Kantor",
+    "office": "Jakarta, Indonesia",
+    "responseLabel": "Waktu respon",
+    "responseValue": "Dalam 1 hari kerja",
+    "fieldName": "Nama",
+    "fieldNamePh": "Nama Anda",
+    "fieldEmail": "Email",
+    "fieldEmailPh": "anda@perusahaan.com",
+    "fieldCompany": "Perusahaan",
+    "fieldCompanyPh": "Perusahaan / organisasi",
+    "fieldType": "Jenis proyek",
+    "fieldTypePh": "Contoh: Platform web, aplikasi mobile, integrasi AI",
+    "fieldMessage": "Pesan",
+    "fieldMessagePh": "Ceritakan tentang proyek, timeline, dan tujuan Anda.",
+    "submit": "Kirim pesan",
+    "submitting": "Mengirim...",
+    "successTitle": "Pesan terkirim.",
+    "successBody": "Terima kasih sudah menghubungi kami. Kami akan membalas dalam satu hari kerja.",
+    "sendAnother": "Kirim pesan lagi"
+  },
+  "Footer": {
+    "tagline": "Membangun produk digital yang menempatkan masa depan di tangan Anda.",
+    "navHeading": "Navigasi",
+    "contactHeading": "Kontak",
+    "office": "Jakarta, Indonesia",
+    "copyright": "© {year} SRYNIC. Hak cipta dilindungi.",
+    "tag": "Future in Hand."
+  },
+  "Lang": {
+    "switch": "Bahasa",
+    "id": "ID",
+    "en": "EN"
+  }
+}

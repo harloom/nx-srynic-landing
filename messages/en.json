@@ -1,0 +1,106 @@
+{
+  "Nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "getInTouch": "Get in touch",
+    "toggleMenu": "Toggle menu"
+  },
+  "Hero": {
+    "badge": "Future in Hand",
+    "title1": "Building the future,",
+    "title2": "one product at a time.",
+    "subtitle": "SRYNIC is a digital engineering studio crafting modern software, platforms, and intelligent systems that move businesses forward.",
+    "primary": "See our work",
+    "secondary": "Start a project →"
+  },
+  "About": {
+    "eyebrow": "About SRYNIC",
+    "title": "A studio of engineers, designers, and builders.",
+    "p1": "We partner with ambitious teams to design and ship digital products end-to-end — from discovery and architecture to launch and scale. Our work spans fintech, edtech, logistics, and IoT, with a single thread: technology that empowers people.",
+    "p2": "Founded in Jakarta, SRYNIC operates with a remote-first culture and a relentless focus on craft. We don't just deliver code — we deliver outcomes.",
+    "stat1": "Products shipped",
+    "stat2": "Industries served",
+    "stat3": "Years of practice",
+    "stat4": "Remote-first",
+    "stat1Value": "30+",
+    "stat2Value": "12",
+    "stat3Value": "5+",
+    "stat4Value": "100%"
+  },
+  "Services": {
+    "eyebrow": "What We Build",
+    "title": "Systems for every platform.",
+    "subtitle": "From native desktop apps to AI-powered platforms, we engineer software across the surfaces your users live on.",
+    "desktopTitle": "Desktop Software",
+    "desktopBody": "Native and cross-platform desktop applications for Windows, macOS, and Linux — built for performance and offline-first workflows.",
+    "mobileTitle": "Mobile Apps",
+    "mobileBody": "iOS and Android apps with native feel and modern UX — from MVPs to mission-critical apps used by thousands daily.",
+    "webTitle": "Web Platforms",
+    "webBody": "Responsive web apps, dashboards, and marketing sites engineered for speed, SEO, and scale — Next.js, React, and modern stacks.",
+    "aiTitle": "AI Integration",
+    "aiBody": "Embed LLMs, vector search, and intelligent automation into your product — from copilots and chatbots to custom AI workflows."
+  },
+  "Goals": {
+    "eyebrow": "Our Goals",
+    "title": "Why we build.",
+    "subtitle": "Three principles guide every engagement we take on.",
+    "g1Title": "Empower people",
+    "g1Body": "Software should make complex work simple. We design for the humans on the other side of the screen — operators, customers, and teams.",
+    "g2Title": "Engineer for the long run",
+    "g2Body": "We favor boring, durable technology choices and clean architecture. Our products are built to be maintained, not just shipped.",
+    "g3Title": "Push the frontier",
+    "g3Body": "We invest in emerging tools — AI, IoT, real-time systems — so our partners can leapfrog, not catch up."
+  },
+  "CTA": {
+    "title": "Have an idea? Let's build it together.",
+    "subtitle": "Tell us about your project and we'll reply within 1 business day.",
+    "button": "Get in touch →"
+  },
+  "Projects": {
+    "eyebrow": "Projects",
+    "title": "Selected work.",
+    "subtitle": "A glimpse of the platforms, products, and systems we've shipped with partners across industries.",
+    "ctaTitle": "Your project could be next.",
+    "ctaSubtitle": "We take on a handful of new engagements each quarter.",
+    "ctaButton": "Start a conversation →"
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something together.",
+    "subtitle": "Tell us a little about your project, your goals, and your timeline. We'll get back to you within one business day.",
+    "emailLabel": "Email",
+    "officeLabel": "Office",
+    "office": "Jakarta, Indonesia",
+    "responseLabel": "Response time",
+    "responseValue": "Within 1 business day",
+    "fieldName": "Name",
+    "fieldNamePh": "Your name",
+    "fieldEmail": "Email",
+    "fieldEmailPh": "you@company.com",
+    "fieldCompany": "Company",
+    "fieldCompanyPh": "Company / organization",
+    "fieldType": "Project type",
+    "fieldTypePh": "e.g. Web platform, mobile app, AI integration",
+    "fieldMessage": "Message",
+    "fieldMessagePh": "Tell us about your project, timeline, and goals.",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "successTitle": "Message sent.",
+    "successBody": "Thanks for reaching out. We'll get back to you within one business day.",
+    "sendAnother": "Send another message"
+  },
+  "Footer": {
+    "tagline": "Building digital products that put the future in your hands.",
+    "navHeading": "Navigation",
+    "contactHeading": "Contact",
+    "office": "Jakarta, Indonesia",
+    "copyright": "© {year} SRYNIC. All rights reserved.",
+    "tag": "Future in Hand."
+  },
+  "Lang": {
+    "switch": "Language",
+    "id": "ID",
+    "en": "EN"
+  }
+}
