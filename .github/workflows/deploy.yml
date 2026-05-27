@@ -1,0 +1,98 @@
+name: Podman build & deploy (demo)
+
+on:
+  push:
+    branches: [demo]
+
+env:
+  IMAGE_NAME: srynic-landing
+  IMAGE_TAG: ${{ github.sha }}
+  CONTAINER_NAME: srynic-landing
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: demo
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+
+      - name: Build image
+        run: |
+          podman build \
+            --file Containerfile \
+            --tag "localhost/${IMAGE_NAME}:${IMAGE_TAG}" \
+            --tag "localhost/${IMAGE_NAME}:latest" \
+            .
+
+      - name: Save image to tar
+        run: |
+          podman save \
+            --format oci-archive \
+            --output "${IMAGE_NAME}-${IMAGE_TAG}.tar" \
+            "localhost/${IMAGE_NAME}:${IMAGE_TAG}"
+          gzip "${IMAGE_NAME}-${IMAGE_TAG}.tar"
+          ls -lh "${IMAGE_NAME}-${IMAGE_TAG}.tar.gz"
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Write env file
+        env:
+          ENV_FILE_CONTENT: ${{ secrets.ENV_FILE }}
+        run: |
+          printf '%s' "$ENV_FILE_CONTENT" > .env
+          chmod 600 .env
+          echo "env file size: $(wc -c < .env) bytes"
+
+      - name: Copy image & env to server
+        run: |
+          scp -i ~/.ssh/deploy_key \
+            "${IMAGE_NAME}-${IMAGE_TAG}.tar.gz" \
+            .env \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      - name: Load image & restart container on server
+        run: |
+          ssh -i ~/.ssh/deploy_key \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
+            "bash -s" <<EOF
+          set -euo pipefail
+          cd "${{ secrets.DEPLOY_PATH }}"
+
+          echo "Loading image..."
+          gunzip -f "${IMAGE_NAME}-${IMAGE_TAG}.tar.gz"
+          podman load --input "${IMAGE_NAME}-${IMAGE_TAG}.tar"
+          rm -f "${IMAGE_NAME}-${IMAGE_TAG}.tar"
+
+          chmod 600 .env
+
+          echo "Stopping old container (if any)..."
+          podman rm -f "${CONTAINER_NAME}" 2>/dev/null || true
+
+          echo "Starting new container..."
+          podman run -d \
+            --name "${CONTAINER_NAME}" \
+            --restart unless-stopped \
+            --env-file .env \
+            -p 3000:3000 \
+            "localhost/${IMAGE_NAME}:${IMAGE_TAG}"
+
+          echo "Pruning old images..."
+          podman image prune -f
+          EOF
+
+      - name: Cleanup secrets on runner
+        if: always()
+        run: rm -f ~/.ssh/deploy_key .env
