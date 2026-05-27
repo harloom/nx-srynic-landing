@@ -8,7 +8,10 @@ WORKDIR /app
 # ---- Dependencies ----
 FROM base AS deps
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
-RUN pnpm install --frozen-lockfile
+# pnpm 11 aborts (ERR_PNPM_IGNORED_BUILDS) when deps with build scripts
+# (sharp, @swc/core, ...) aren't explicitly approved. In a trusted CI build
+# we allow them all so the install doesn't fail.
+RUN pnpm install --frozen-lockfile --config.dangerouslyAllowAllBuilds=true
 
 # ---- Builder ----
 FROM base AS builder
